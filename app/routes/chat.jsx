@@ -104,7 +104,10 @@ async function handleChatRequest(request, shopOrigin) {
     });
 
     return new Response(responseStream, {
-      headers: getSseHeaders(shopOrigin)
+      headers: {
+        ...getSseHeaders(shopOrigin),
+        "Access-Control-Allow-Origin": shopOrigin,
+      }
     });
   } catch (error) {
     console.error('Error in chat request handler:', error);

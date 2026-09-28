@@ -464,7 +464,7 @@
      * API communication and data handling
      */
     API: {
-      CHAT_URL: 'https://localhost:3458/chat',
+      CHAT_URL: 'https://chatat.facetimefy.com/chat',
 
       /**
        * Stream a response from the API
